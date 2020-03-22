@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.example.basedatos.Data.StudentsDb
 import com.example.basedatos.Data.StudentsEntity
 import com.example.basedatos.util.validation
+//import com.example.basedatos.ListEdit.miAdaptador
 import kotlinx.android.synthetic.main.activity_alta_estudiante.*
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_edit.*
@@ -24,7 +25,7 @@ class EditActivity : AppCompatActivity() {
         val year = c.get(Calendar.YEAR)
         val month = c.get(Calendar.MONTH)
         val day = c.get(Calendar.DAY_OF_MONTH)
-
+        var idEdit =-1
         edtNacimientoEdicion.setOnClickListener {
 
             val dpd = DatePickerDialog(
@@ -32,7 +33,7 @@ class EditActivity : AppCompatActivity() {
                 DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
                     // Display Selected date in TextView
                     val mes = (monthOfYear + 1)
-                    edtNacimiento.setText("" + dayOfMonth + "-" + mes.toString() + "-" + year)
+                    edtNacimientoEdicion.setText("" + dayOfMonth + "-" + mes.toString() + "-" + year)
                 },
                 year,
                 month,
@@ -45,6 +46,7 @@ class EditActivity : AppCompatActivity() {
         var student = StudentsEntity()
         if (id != null) {
             student = studentsDb.studentsGetOne(id.toInt())
+             idEdit = id.toInt()
         }
 
         txvCuentaEdit.setText("${student.id.toString()}")
@@ -70,13 +72,13 @@ class EditActivity : AppCompatActivity() {
             if (selectedNivelAcademico != -1) {
                 var nivelAcademico = 0
                 when (selectedNivelAcademico) {
-                    rdbPrepa.id -> {
+                    rdgSecundariaE.id -> {
                         nivelAcademico = 1
                     }
-                    rdbSecundaria.id -> {
+                    rdgPrepaE.id -> {
                         nivelAcademico = 2
                     }
-                    rdbUniversidad.id -> {
+                    rdgUniversidadE.id -> {
                         nivelAcademico = 3
                     }
                 }
@@ -94,11 +96,11 @@ class EditActivity : AppCompatActivity() {
                         ) {
                             var correo = edtCorreoEdicion.text.toString()
                             //-------------------------------------------------
-                            if (edtNacimiento.text.toString().trim().isNotEmpty()) {
+                            if (edtNacimientoEdicion.text.toString().trim().isNotEmpty()) {
 
-                                var nacimiento = edtNacimiento.text.toString()
+                                var nacimiento = edtNacimientoEdicion.text.toString()
                                 var values = StudentsEntity(
-                                    -1,
+                                    idEdit,
                                     student.name,
                                     student.lastName,
                                     student.motherLastName,
@@ -109,7 +111,7 @@ class EditActivity : AppCompatActivity() {
                                     correo,
                                     nacimiento
                                 )
-                                var id = studentsDb.studentAdd(values)
+                                var id = studentsDb.studentEdit(values)
                                 Log.d("UDELP", "El elemento guardado es $id")
                                 /*edtNombreAlta.text.clear()
                             edtApellidoPAlta.text.clear()
@@ -119,7 +121,9 @@ class EditActivity : AppCompatActivity() {
                             spnEscuelaProcedencia.setSelection(0)
                             edtTelefonoAlta.text.clear()
                             edtCorreoAlta.text.clear()*/
-                                edtNacimiento.setText("Fecha de Nacimiento")
+//                                edtNacimientoEdicion.setText("Fecha de Nacimiento")
+
+                                studentsDb.studentsGetAllString()
                                 Toast.makeText(
                                     this@EditActivity,
                                     "Editado con exito \uD83D\uDE1C\uD83E\uDD13",

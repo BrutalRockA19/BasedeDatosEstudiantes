@@ -16,6 +16,7 @@ class ListEdit : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_edit)
         if( studentsDb.studentsGetAllString().size >0){
+
             val miAdaptador = ArrayAdapter<String> (this@ListEdit, android.R.layout.simple_list_item_1,studentsDb.studentsGetAllString())
 
             ltvMisEstudiantes.adapter=miAdaptador

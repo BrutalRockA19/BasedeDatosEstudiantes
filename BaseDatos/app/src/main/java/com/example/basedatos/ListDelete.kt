@@ -16,7 +16,7 @@ class ListDelete : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_delete)
-
+        studentsDb.studentsGetAllString()
         if( studentsDb.studentsGetAllString().size >0){
             val miAdaptador = ArrayAdapter<String> (this@ListDelete, android.R.layout.simple_list_item_1,studentsDb.studentsGetAllString())
 
