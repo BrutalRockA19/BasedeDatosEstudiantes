@@ -1,6 +1,7 @@
 package com.example.basedatos
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -113,17 +114,11 @@ class EditActivity : AppCompatActivity() {
                                 )
                                 var id = studentsDb.studentEdit(values)
                                 Log.d("UDELP", "El elemento guardado es $id")
-                                /*edtNombreAlta.text.clear()
-                            edtApellidoPAlta.text.clear()
-                            edtApellidoMAlta.text.clear()
-                            spnGenero.setSelection(0)
-                            rdgNivelAcademico.clearCheck()
-                            spnEscuelaProcedencia.setSelection(0)
-                            edtTelefonoAlta.text.clear()
-                            edtCorreoAlta.text.clear()*/
-//                                edtNacimientoEdicion.setText("Fecha de Nacimiento")
+
 
                                 studentsDb.studentsGetAllString()
+//                        -----------------------------------------------
+
                                 Toast.makeText(
                                     this@EditActivity,
                                     "Editado con exito \uD83D\uDE1C\uD83E\uDD13",
