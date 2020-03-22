@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BaseDatos</string>
+    <string name="txtAltaEstudiante">Alta Estudiante</string>
+    <string name="txtListaEstudiantes">Lista Estudiantes</string>
+    <string name="txtEliminarEstudiante">Eliminar Estudiante</string>
+    <string name="txtEditarEstudiante">Editar Estudiante</string>
+    <string name="txtTituloAlta">Alta Estudiante</string>
+    <string name="hintNombreAlta">Nombre</string>
+    <string name="hintApellidoPAlta">Apellido Paterno</string>
+    <string name="hintApellidoMAlta">Apellido Materno</string>
+    <string name="txtTituloNivelAcademicoAlta">Nivel Academico</string>
+    <string name="txtSecundaria">Secundaria</string>
+    <string name="txtPrepa">Preparatoria</string>
+    <string name="txtUniversidad">Universidad</string>
+    <string name="hintTelefono">Telefono</string>
+    <string name="hintCorreo">Correo</string>
+    <string name="txtRegistrar">Registrar</string>
+    <string name="hintNacimiento">Fecha de Nacimiento</string>
+    <string name="txtPiePagina">From Andrew Ch</string>
+    <string name="txtTituloMain">Bienvenido</string>
+    <string name="txtTituloMisEncuestas">Lista de Estudiantes</string>
+    <string name="txtDetalleEstudiante">Información</string>
+    <string name="txtNumeroCuenta">Numero de cuenta</string>
+    <string name="txtCuentaEstudiante">"     -      "</string>
+    <string name="txtNombreDetalle">Nombre</string>
+    <string name="txtStudentDetail">El nombre completo aqui</string>
+    <string name="txtGeneroDetail">Genero</string>
+    <string name="txtTituloDelete">Eliminar Estudiante</string>
+    <string name="txtTituloEdit">Editar Estudiante</string>
+    <string name="btnEditar">Editar</string>
+    <string name="txtEscuela">Escuela de procedencia</string>
+</resources>

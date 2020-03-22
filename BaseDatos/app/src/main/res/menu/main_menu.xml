@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/itmAltaEstudiante"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never"
+        android:title="@string/txtAltaEstudiante"
+        />
+    <item android:id="@+id/itmMisEstudiante"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never"
+        android:title="@string/txtListaEstudiantes"
+        />
+    <item android:id="@+id/itmEliminarEstudiante"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never"
+        android:title="@string/txtEliminarEstudiante"
+        />
+    <item android:id="@+id/itmEditarEstudiante"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never"
+        android:title="@string/txtEditarEstudiante"
+        />
+</menu>
