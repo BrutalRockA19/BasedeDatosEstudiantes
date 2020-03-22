@@ -29,4 +29,5 @@
     <string name="txtTituloEdit">Editar Estudiante</string>
     <string name="btnEditar">Editar</string>
     <string name="txtEscuela">Escuela de procedencia</string>
+    <string name="txtTituloEscuelaDetalle">Escuela Detalle</string>
 </resources>

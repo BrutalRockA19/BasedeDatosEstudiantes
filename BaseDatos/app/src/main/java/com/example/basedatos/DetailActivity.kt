@@ -42,6 +42,34 @@ class DetailActivity : AppCompatActivity() {
 
             }
         }
+        when(student.previousSchool){
+            1->{
+                txvEscuelaDetalle.setText("Reims")
+            }
+            2->{
+                txvEscuelaDetalle.setText("Escuela Nacional Preparatoria")
+            }
+            3->{
+                txvEscuelaDetalle.setText("La salle")
+            }
+            4->{
+                txvEscuelaDetalle.setText("UVM")
+            }
+            5->{
+                txvEscuelaDetalle.setText("Tecnologico de Monterrey")
+            }
+            6->{
+                txvEscuelaDetalle.setText("Tecnologico de Monterrey")
+            }
+            6->{
+                txvEscuelaDetalle.setText("Unitec")
+            }
+            7->{
+                txvEscuelaDetalle.setText("Otra")
+            }
+
+        }
+
         txvTelStudent.setText(student.phone)
         txvCorreoStudent.setText(student.email)
         txvNacimientoStudent.setText(student.birthday)

@@ -35,6 +35,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/txtNumeroCuenta"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txvDetalleEncuesta" />
 
@@ -58,6 +59,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/txtNombreDetalle"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txvCuentaEstudiante" />
 
@@ -80,6 +82,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/txtGeneroDetail"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txvNombreStudent" />
 
@@ -103,6 +106,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/txtTituloNivelAcademicoAlta"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txvGeneroStudent" />
 
@@ -114,9 +118,22 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
                 android:text="@string/txtTituloNivelAcademicoAlta"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txvNivelEscolarDetail" />
+            <TextView
+                android:id="@+id/txvEscuelaDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/txtTituloEscuelaDetalle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvNivelEscolarStudent" />
+
 
             <TextView
                 android:id="@+id/txvTelefonoDetail"
@@ -125,8 +142,9 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/hintTelefono"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txvNivelEscolarStudent" />
+                app:layout_constraintTop_toBottomOf="@+id/txvEscuelaDetalle" />
 
             <TextView
                 android:id="@+id/txvTelStudent"
@@ -147,6 +165,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/hintCorreo"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txvTelStudent" />
 
@@ -168,6 +187,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/hintNacimiento"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txvCorreoStudent" />
             <TextView
